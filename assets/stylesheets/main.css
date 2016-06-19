@@ -1,0 +1,26 @@
+body {
+  min-width: 320px;
+}
+
+.banner {
+  background: black;
+}
+
+.banner img {
+  width: 100%;
+  max-width: 400px;
+}
+
+.banner h1 {
+  color: white;
+  text-align: center;
+}
+
+.banner h1::first-letter{
+  background-color: #666;
+  color: #FFF;
+  display: inline-block;
+  padding:display 0 5px;
+  border-radius: 3px;
+  margin-right: 2px;
+}

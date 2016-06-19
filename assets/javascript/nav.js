@@ -1,4 +1,14 @@
-window.onload = (function(){
+$(function() {
+  $(".cn-wrapper a").on('click', function(e) {
+    e.preventDefault();
+    closeNav();
+    $('html, body').animate({
+      scrollTop: $("#" + $(this).data('link')).offset().top - 100
+    }, 1000);
+  });
+
+
+/*TODO: make below code jquery */
 
 	var button = document.getElementById('cn-button'),
     wrapper = document.getElementById('cn-wrapper'),
