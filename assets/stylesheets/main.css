@@ -29,7 +29,7 @@ body {
 
 }
 
-#about_me {
+.dog-container, .bagpipe-container, .travel-container {
 
   /* How pronounced should the 3D effects be */
   perspective: 800px;
@@ -38,13 +38,20 @@ body {
   background: radial-gradient(#e0e0e0, #aaa);
   /*width:480px;*/
   /*height:480px;*/
-  margin:0 auto;
+  width: 50%;
+  height: 200px;
+  margin: 20px auto;
   /*border-radius:6px;*/
-  position:relative;
+  /*position: fixed;*/
+  /*top: 0;*/
+  /*left: 0;*/
+  /*width: 100%;*/
+  /*height:100%;*/
 }
 
-.dog-front,
-.dog-back{
+.dog-front, .dog-back,
+.bagpipe-front, .bagpipe-back,
+.travel-front, .travel-back {
 
   /* Enable 3D transforms */
   transform-style: preserve-3d;
@@ -60,48 +67,67 @@ body {
   width:100%;
   height:100%;
 
-  position:absolute;
-  /*top:40%;
-   * left:50%;
-   *     margin-left: -100px;*/
+  /*position:absolute;*/
+  /*top:40%;*/
+   /*left:50%;*/
+       /*margin-left: -100px;*/
   /*margin:-166px 0 0 -100px;*/
 
-  /*background:url(http://demo.tutorialzine.com/2013/10/css3-features-you-can-finally-use/assets/img/iphone.png) no-repeat left center;
-   *     */
   /* Animate the transitions */
   transition:0.8s;
+  text-align: center;
 }
-.dog-back:before{
-    content: 'boo'   
-}
-.dog-front:before{
-  content: 'hover'   
-}
-.dog-back{
-  /*position: absolute;*/
+.dog-back, .bagpipe-back, .travel-back {
+  position: absolute;
+  top: 0;
 
- /* The back side is flipped 180 deg by default */
- transform:rotateY(180deg) scale(0.5) translate(50%, 50%);
- -webkit-transform:rotateY(180deg) scale(0.5) translate(50%, 50%);
+  /* The back side is flipped 180 deg by default */
+  transform:rotateY(180deg) scale(1) translate(0, 0);
+  -webkit-transform:rotateY(180deg) scale(1) translate(0, 0);
 
- background-position:right center;
- background-color: blue;
- overflow: hidden;
+  background-position:right center;
+  background-color: #3eb0f7;
+  overflow: hidden;
 }
-.dog-front{
-  transform:scale(0.5) translate(50%, 50%);
-  -webkit-transform:scale(0.5) translate(50%, 50%);
-  background-color: blue;
+
+.dog-back img, .bagpipe-back img, .travel-back img {
+  width:80%;
+  max-width: 400px;
 }
-#about_me:hover .dog-front{
+
+.dog-front, .bagpipe-front, .travel-front {
+  transform:scale(1) translate(0,0);
+  -webkit-transform:scale(1) translate(0, 0);
+  background-color: #9fd8fb;
+}
+.dog-container:hover,
+.bagpipe-container:hover,
+.travel-container:hover {
+  position: relative;
+  z-index: 1;
+}
+.dog-container:hover .dog-front,
+.bagpipe-container:hover .bagpipe-front,
+.travel-container:hover .travel-front {
   /* When the container is hovered, flip the front side and hide it .. */
-  transform:rotateY(180deg) scale(1) translate(0,0);
-  -webkit-transform:rotateY(180deg) scale(1) translate(0,0);
+  transform:rotateY(180deg) scale(2) translate(0,0);
+  -webkit-transform:rotateY(180deg) scale(2) translate(0,0);
 }
 
-#about_me:hover .dog-back{
+.dog-container:hover .dog-back,
+.bagpipe-container:hover .bagpipe-back,
+.travel-container:hover .travel-back {
   overflow: scroll;
+  overflow-y: scroll;
   /* .. at the same time flip the back side into visibility */
-  transform:rotateY(360deg) scale(1) translate(0,0);
-  -webkit-transform:rotateY(360deg) scale(1) translate(0,0);
+  transform:rotateY(360deg) scale(2) translate(0,0);
+  -webkit-transform:rotateY(360deg) scale(2) translate(0,0);
+}
+
+.dog-container:hover .dog-back * {
+  font-size: 50%;
+  /*transform: scale(0.5);*/
+  /*transform-origin: 0 0;*/
+  /*-webkit-transform: scale(0.5) ;*/
+  /*-webkit-transform-origin: 0 0;*/
 }
