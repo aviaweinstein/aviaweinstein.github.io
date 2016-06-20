@@ -7,10 +7,14 @@
     <link rel="stylesheet" type="text/css" href="assets/stylesheets/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/stylesheets/nav.css">
     <link rel="stylesheet" type="text/css" href="assets/stylesheets/main.css">
+    <link rel="stylesheet" type="text/css" href="assets/stylesheets/font_sizes.css">
     <script src="assets/javascript/jquery-3.0.0.min.js"></script>
     <script src="assets/javascript/modernizr-2.6.2.min.js"></script>
     <script src="assets/javascript/polyfills.js"></script>
     <script src="assets/javascript/nav.js"></script>
+    <script src="assets/javascript/drag_up.js"></script>
+    <script src="assets/javascript/drag_down.js"></script>
+    <script src="assets/javascript/drag_move.js"></script>
   </head>
 
   <body>
@@ -33,52 +37,112 @@
       <h2>
         About Me
       </h2>
+      <p class="large sub-title bold">
+        Professionally
+      </p>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut lectus arcu. In eget viverra neque. Nam id venenatis orci. Aenean posuere metus ut justo pulvinar condimentum. Pellentesque vitae feugiat orci, quis commodo est. Donec sed dolor a purus porta laoreet in et mi. Fusce non aliquet risus, ac tristique mauris. Duis a nibh eget dui maximus scelerisque convallis et metus. Phasellus ex tellus, vehicula nec eros euismod, pulvinar aliquam nisl.
       </p>
-      <div class="dog-container">
-        <div class="dog-front">
-          <p>Meet my dog</p>
-        </div>
-        <div class="dog-back">
-          <p>This is Gilli! </p>
-          <img src="assets/images/gilli.jpg" alt="My dog Gilli" />
-          <p>His name means happiness because he is always wagging his tail. He is an 85lb box mix. I love him to death!</p>
-        </div>
-      </div>
-      <div class="bagpipe-container">
-        <div class="bagpipe-front">
-          <p>content front</p>
-        </div>
-        <div class="bagpipe-back">
-          <p>content back</p>
-          <p>more content</p>
-        </div>
-      </div>
-      <div class="travel-container">
-        <div class="travel-front">
-          <p>content front</p>
-        </div>
-        <div class="travel-back">
-          <p>content back</p>
-          <p>more content</p>
-        </div>
-      </div>
+      <p class="large sub-title bold">
+        Personally
+      </p>
       <p>
         Sed pulvinar gravida sem, in vulputate diam pellentesque sed. Sed tempor malesuada metus, ut blandit ex pulvinar ut. Phasellus a lobortis felis, vel aliquet nulla. Vestibulum laoreet in velit vitae ornare. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin malesuada libero ac est tristique tincidunt.
       </p>
+      <div class="dog-container tile-container">
+        <div class="dog-front front">
+          <p>Meet my dog...</p>
+        </div>
+        <div class="dog-back back">
+          <p>This is Gilli! </p>
+          <img src="assets/images/gilli.jpg" alt="My dog Gilli" />
+          <p>His name means happiness as he is always wagging his tail. He is an 85lb boxer mix. I love him to death!</p>
+        </div>
+      </div>
+      <div class="bagpipe-container tile-container">
+        <div class="bagpipe-front front">
+          <p>See my bagpipe band...</p>
+        </div>
+        <div class="bagpipe-back back">
+          <p>I have been playing tenor drums in the Carnegie Mellon Bagpipe band for 5 years now! We have both a grade 3 and 5 band.</p>
+          <img src="assets/images/bagpipe.jpg" alt="My bagpipe band" />
+          <p>Between Monday night practice and weekend competitions, I get my fair share of celtic music!</p>
+        </div>
+      </div>
+      <div class="travel-container tile-container">
+        <div class="travel-front front">
+          <p>Where I've traveled...</p>
+        </div>
+        <div class="travel-back back">
+          <p>I absolutely love to travel: seeing new cultures and eating new foods. My favorite trips to date were my internship in India and vacation in Costa Rica.</p>
+          <img src="assets/images/india.jpg" alt="India" />
+          <img src="assets/images/costa_rica.jpg" alt="Costa Rica" />
+        </div>
+      </div>
     </div>
+    <hr />
     <div id="projects">
       <h2>
-        projects
+        Projects
       </h2>
-      jab h ihiudahjfd ngahgb avbih
+      <p>
+        The following work includes both personal projects and a couple highlighted pieces from previous jobs.
+      </p>
+      <p class="large sub-title bold">
+        4moms Website
+      </p>
+      <p>
+        While working at 4moms, I spent an extensive amount of time working on the company website where I touched almost every page. Once the design files are recieved, I work with the relevent designers to execute page updates with great attention to detail. A noteworthy project was a website wide responsive redesign. Some of the most interesting pages I updated (links added and verified through June 2016) are:
+      </p>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <p class="large sub-title bold">
+        iSTEP Website
+      </p>
+      <p>
+        As an iSTEP intern during the summer of 2013, I implemented a website in about 12 hours to show case the internship program for the nonprofit TechBridgeWorld. This work was accomplished by collaborating with the design intern. Visit the website
+        <a target="_blank" href="http://istep2013.techbridgeworld.org/">here</a>.
+      </p>
+      <p class="large sub-title bold">
+        This Website
+      </p>
+      <p>
+        In case you weren't sure, I created this website from scratch. This work highlights some of my CSS3 skills including transitions and transformations. I even created the basic design!
+      </p>
+      <p class="large sub-title bold">
+        Some Catchy Title
+      </p>
+      <p>
+        This was a fun side project I did after being inspired by another website. Using JavaScript, I allowed potential users to interact with images by dragging either mouse on computer or finger on touch screen. Try it yourself below! (Note: Images property of 4moms®)
+      </p>
+      <div class="examples">
+        <h3>drag down to open the 4moms breeze®</h3>
+        <img src="assets/images/tmp-0.gif" class="open"/>
+      </div>
+      <div class="examples">
+        <h3>drag up to close the 4moms breeze</h3>
+        <img src="assets/images/tmp-12.gif" class="close"/>
+      </div>
+      <div class="examples">
+        <h3>drag to manipulate the 4moms breeze</h3>
+        <img src="assets/images/tmp-0.gif" class="move"/>
+      </div>
     </div>
+    <hr />
     <div id="resume">
       <h2>
         Resume
       </h2>
-      blah vblahfdhg uh uhbdf beb
+      <p>
+        An updated resume will be availible to download soon.
+      </p>
+      <p>
+        If you would like to reach out to me, feel free to send an
+        <a href="mailto:aviaweinstein@gmail.com?Subject=I%20saw%20your%20website">email</a>.
+      </p>
     </div>
   </body>
 

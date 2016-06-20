@@ -25,11 +25,26 @@ body {
   margin-right: 2px;
 }
 
-#about_me {
-
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.dog-container, .bagpipe-container, .travel-container {
+.sub-title {
+  padding: 5px 0;
+  border-bottom: 1px solid black;
+  margin-bottom:8px;
+}
+
+.sub-title:not(:first-child) {
+  margin-top: 20px;
+}
+
+#about_me, #projects, #resume {
+  margin: 20px 10px;
+}
+
+.tile-container {
 
   /* How pronounced should the 3D effects be */
   perspective: 800px;
@@ -38,7 +53,7 @@ body {
   background: radial-gradient(#e0e0e0, #aaa);
   /*width:480px;*/
   /*height:480px;*/
-  width: 50%;
+  width: 160px;
   height: 200px;
   margin: 20px auto;
   /*border-radius:6px;*/
@@ -49,9 +64,7 @@ body {
   /*height:100%;*/
 }
 
-.dog-front, .dog-back,
-.bagpipe-front, .bagpipe-back,
-.travel-front, .travel-back {
+.front, .back {
 
   /* Enable 3D transforms */
   transform-style: preserve-3d;
@@ -77,7 +90,7 @@ body {
   transition:0.8s;
   text-align: center;
 }
-.dog-back, .bagpipe-back, .travel-back {
+.back {
   position: absolute;
   top: 0;
 
@@ -90,33 +103,38 @@ body {
   overflow: hidden;
 }
 
-.dog-back img, .bagpipe-back img, .travel-back img {
+.back * {
+  margin: 5px 10px;
+
+}
+
+.back img {
   width:80%;
   max-width: 400px;
 }
 
-.dog-front, .bagpipe-front, .travel-front {
+.front {
   transform:scale(1) translate(0,0);
   -webkit-transform:scale(1) translate(0, 0);
   background-color: #9fd8fb;
+  display: table;
 }
-.dog-container:hover,
-.bagpipe-container:hover,
-.travel-container:hover {
+.front * {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 5px;
+}
+.tile-container:hover {
   position: relative;
   z-index: 1;
 }
-.dog-container:hover .dog-front,
-.bagpipe-container:hover .bagpipe-front,
-.travel-container:hover .travel-front {
+.tile-container:hover .front {
   /* When the container is hovered, flip the front side and hide it .. */
   transform:rotateY(180deg) scale(2) translate(0,0);
   -webkit-transform:rotateY(180deg) scale(2) translate(0,0);
 }
 
-.dog-container:hover .dog-back,
-.bagpipe-container:hover .bagpipe-back,
-.travel-container:hover .travel-back {
+.tile-container:hover .back {
   overflow: scroll;
   overflow-y: scroll;
   /* .. at the same time flip the back side into visibility */
@@ -124,10 +142,21 @@ body {
   -webkit-transform:rotateY(360deg) scale(2) translate(0,0);
 }
 
-.dog-container:hover .dog-back * {
+.tile-container:hover .back * {
   font-size: 50%;
   /*transform: scale(0.5);*/
   /*transform-origin: 0 0;*/
   /*-webkit-transform: scale(0.5) ;*/
   /*-webkit-transform-origin: 0 0;*/
+}
+
+.examples {
+  width: 300px;
+  margin: 10px auto;
+  text-align: center;
+  border: 1px solid lightgray;
+}
+
+#resume {
+  margin-bottom: 50px;
 }
