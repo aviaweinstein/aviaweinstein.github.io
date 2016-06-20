@@ -2,6 +2,10 @@ body {
   min-width: 320px;
 }
 
+ul {
+  padding-left: 17px;
+}
+
 .banner {
   background: black;
 }
