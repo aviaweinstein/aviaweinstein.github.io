@@ -128,17 +128,17 @@ h2 {
   vertical-align: middle;
   padding: 0 5px;
 }
-.tile-container:hover {
+.tile-container:hover, .tile-container:active {
   position: relative;
   z-index: 1;
 }
-.tile-container:hover .front {
+.tile-container:hover .front, .tile-container:active .front {
   /* When the container is hovered, flip the front side and hide it .. */
   transform:rotateY(180deg) scale(2) translate(0,0);
   -webkit-transform:rotateY(180deg) scale(2) translate(0,0);
 }
 
-.tile-container:hover .back {
+.tile-container:hover .back, .tile-container:active .back {
   overflow: scroll;
   overflow-y: scroll;
   /* .. at the same time flip the back side into visibility */
@@ -146,7 +146,7 @@ h2 {
   -webkit-transform:rotateY(360deg) scale(2) translate(0,0);
 }
 
-.tile-container:hover .back * {
+.tile-container:hover .back *, .tile-container:active .back * {
   font-size: 50%;
   /*transform: scale(0.5);*/
   /*transform-origin: 0 0;*/
