@@ -27,7 +27,7 @@
   padding-right: 1.5em;
   height: 3.5em;
   width: 3.5em;
-  background-color: #111;
+  background-color: #00AFD8;
   position: fixed;
   left: 100%;
   margin-left: -1.75em;
@@ -39,7 +39,7 @@
 .cn-button:hover,
 .cn-button:active,
 .cn-button:focus{
-  background-color: #222;
+  background-color: #00AFD8;
 }
 .cn-overlay{
   width:100%
@@ -197,7 +197,7 @@
   background-color: #6F325C;
   color: #fff;
 }
-@media screen and (max-width:480px) {
+/**@media screen and (max-width:480px) {
   .csstransforms .cn-wrapper{
     font-size:.68em;
   }
@@ -208,7 +208,7 @@
     font-size:1.52em;
   }
 }
-
+/**
 @media screen and (max-width:320px) {
   .no-csstransforms .cn-wrapper {
     width:15.15px;
@@ -219,3 +219,4 @@
     width:3em;
   }
 }
+**/

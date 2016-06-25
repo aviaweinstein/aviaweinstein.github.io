@@ -1,5 +1,9 @@
-html {
-  font-family: sans-serif;
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,700italic,400italic,300,300italic);
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  line-height: 1.3em;
 }
 
 h1 {
@@ -11,6 +15,16 @@ h2 {
 p.large {
   font-size: 1.1em;
 }
+p.small {
+  font-size: 0.9em;
+}
+.caption {
+  line-height: 1.1em;
+  font-style: italic;
+}
+.ghost_button a{
+  font-weight: 400;
+}
 .bold {
-  font-weight: bold;
+  font-weight: 400;
 }

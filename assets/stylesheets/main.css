@@ -11,22 +11,20 @@ ul {
 }
 
 .banner img {
-  width: 100%;
+  width: 80%;
   max-width: 400px;
+  margin: 0 auto;
+  display: block;
 }
 
 .banner h1 {
   color: white;
   text-align: center;
+  padding: 15px 0;
 }
 
 .banner h1::first-letter {
-  background-color: #666;
-  color: #FFF;
-  display: inline-block;
-  padding:display 0 5px;
-  border-radius: 3px;
-  margin-right: 2px;
+
 }
 
 h2 {
@@ -36,7 +34,7 @@ h2 {
 
 .sub-title {
   padding: 5px 0;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #ccc;
   margin-bottom:8px;
 }
 
@@ -44,8 +42,33 @@ h2 {
   margin-top: 20px;
 }
 
+.button_container {
+  width: 252px;
+  margin: 0 auto;
+}
+
+.ghost_button {
+  width: 250px;
+  height: 40px;
+  margin: 15px auto;
+  border: 1px solid #00AFD8;
+  text-align: center;
+  display: table;
+}
+
+.ghost_button a {
+  display: table-cell;
+  vertical-align: middle;
+  text-decoration: none;
+  color: #00AFD8;
+}
+
+.caption {
+  text-align: center;
+}
+
 #about_me, #projects, #resume {
-  margin: 20px 10px;
+  margin: 20px 35px;
 }
 
 .tile-container {
@@ -155,10 +178,22 @@ h2 {
 }
 
 .examples {
-  width: 300px;
-  margin: 10px auto;
+  width: 250px;
+  margin: 25px auto;
   text-align: center;
   border: 1px solid lightgray;
+}
+
+.examples h3 {
+  padding: 16px;
+}
+
+.examples img {
+  width: 250px;
+}
+
+.examples img:hover {
+  
 }
 
 #resume {
