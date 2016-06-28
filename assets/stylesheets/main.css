@@ -151,15 +151,30 @@ h2 {
   display: table-cell;
   vertical-align: middle;
 }
+.front > img {
+  height: 100%;
+}
 .tile-container.is_open {
   position: relative;
   z-index: 1;
 }
 .tile-container.is_open .front {
   /* When the container is hovered, flip the front side and hide it .. */
-  transform:rotateY(180deg) translate(-60px,0);
-  -webkit-transform:rotateY(180deg) translate(-60px,0);
+  transform:rotateY(180deg) translate(60px,0);
+  -webkit-transform:rotateY(180deg) translate(60px,0);
   width: 320px;
+}
+
+.tile-container.is_open.dog-container .front {
+  height: 397px;
+}
+
+.tile-container.is_open.bagpipe-container .front {
+  height: 437px;
+}
+
+.tile-container.is_open.travel-container .front {
+  height: 658px;
 }
 
 .tile-container.is_open .back {
@@ -168,6 +183,18 @@ h2 {
   -webkit-transform:rotateY(360deg) translate(-60px,0);
   width: 320px;
   height: auto;
+}
+
+.tile-container.is_open.dog-container .back {
+  height: 397px;
+}
+
+.tile-container.is_open.bagpipe-container .back {
+  height: 437px;
+}
+
+.tile-container.is_open.travel-container .back {
+  height: 658px;
 }
 
 .tile-container.is_open .back *, .tile-container.is_open .back * {
@@ -251,6 +278,18 @@ h2 {
   .tile-container {
     margin: 20px 10px;
     display: inline-block;
+  }
+
+  .tile-container.is_open.dog-container .front, .tile-container.is_open.dog-container .back {
+    height: 417px;
+  }
+
+  .tile-container.is_open.bagpipe-container .front, .tile-container.is_open.bagpipe-container .back {
+    height: 489px;
+  }
+
+  .tile-container.is_open.travel-container .front, .tile-container.is_open.travel-container .back {
+    height: 703px;
   }
 
   #resume_button_container {
