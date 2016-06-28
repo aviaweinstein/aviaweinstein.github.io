@@ -1,5 +1,6 @@
 body {
   min-width: 320px;
+  color: #5f5f61;
 }
 
 ul {
@@ -7,7 +8,7 @@ ul {
 }
 
 .banner {
-  background: black;
+  background: #e5deda;
 }
 
 .banner img {
@@ -20,7 +21,12 @@ ul {
 .banner h1 {
   color: white;
   text-align: center;
-  padding: 15px 0;
+  padding: 15px 0 0 0;
+  text-shadow:
+    -1px -1px 0 #5f5f61,  
+    1px -1px 0 #5f5f61,
+    -1px 1px 0 #5f5f61,
+    1px 1px 0 #5f5f61;
 }
 
 .banner h1::first-letter {
@@ -54,6 +60,7 @@ h2 {
   border: 1px solid #00AFD8;
   text-align: center;
   display: table;
+  border-radius: 5px;
 }
 
 .ghost_button a {
@@ -77,7 +84,6 @@ h2 {
   perspective: 800px;
   -webkit-perspective: 800px;
 
-  background: radial-gradient(#e0e0e0, #aaa);
   width: 200px;
   height: 200px;
   margin: 20px auto;
@@ -117,7 +123,7 @@ h2 {
   -webkit-transform-origin: center center center;
   transform-origin: center center center;
   background-position:center center;
-  background-color: #3eb0f7;
+  background-color: #88c8e4;
   overflow: hidden;
 }
 
@@ -134,15 +140,16 @@ h2 {
 .front {
   transform: translate(0,0);
   -webkit-transform: translate(0, 0);
-  background-color: #9fd8fb;
   display: table;
   -webkit-transform-origin: center center center;
   transform-origin: center center center;
 }
+.front:hover {
+  cursor: pointer;
+}
 .front * {
   display: table-cell;
   vertical-align: middle;
-  padding: 0 5px;
 }
 .tile-container.is_open {
   position: relative;
@@ -156,16 +163,45 @@ h2 {
 }
 
 .tile-container.is_open .back {
-  overflow: scroll;
-  overflow-y: scroll;
   /* .. at the same time flip the back side into visibility */
   transform:rotateY(360deg) translate(-60px,0);
   -webkit-transform:rotateY(360deg) translate(-60px,0);
   width: 320px;
+  height: auto;
 }
 
 .tile-container.is_open .back *, .tile-container.is_open .back * {
 
+}
+
+.tile-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  background: #efdeda;
+  background: rgba(239,222,218,0.6);
+  opacity: 0.9;
+}
+
+.tile-overlay p {
+  display: block;
+  padding: 10px 0;
+}
+
+.tile-overlay img {
+  width: 150px;
+  margin: 0 auto;
+}
+
+.close {
+  width: 20px;
+}
+
+.close img {
+  margin: 0;
 }
 
 .examples {
@@ -173,6 +209,7 @@ h2 {
   margin: 25px auto;
   text-align: center;
   border: 1px solid lightgray;
+  border-radius: 5px;
 }
 
 .examples h3 {
@@ -184,9 +221,59 @@ h2 {
 }
 
 .examples img:hover {
-  
+  cursor:ns-resize;
 }
 
 #resume {
   margin-bottom: 50px;
+}
+
+@media screen and (min-width:768px) {
+  .banner {
+    position: relative;
+  }
+
+  .banner h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding-left: 40px;
+  }
+
+  .banner img {
+    padding-right: 247px;
+  }
+
+  .tiles {
+    text-align: center;
+  }
+
+  .tile-container {
+    margin: 20px 10px;
+    display: inline-block;
+  }
+
+  #resume_button_container {
+    text-align: center;
+  }
+
+  .resume_buttons {
+    display: inline-block;
+    margin: 0 5px;
+  }
+}
+
+@media screen and (min-width:868px) {
+  .web_4moms_buttons {
+    width: 33%;
+    float: left;
+    margin: 15px 0;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  #about_me, #projects, #resume {
+    max-width: 990px;
+    margin: 20px auto;
+  }
 }

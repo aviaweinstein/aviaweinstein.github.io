@@ -28,3 +28,17 @@ p.small {
 .bold {
   font-weight: 400;
 }
+.bolder {
+  font-weight: 600;
+}
+@media screen and (min-width:768px) {
+  body {
+  	font-size: 1.2em;
+  }
+  .tile-overlay p {
+  	font-size: 0.8em;
+  }
+  .ghost_button {
+  	font-size: 0.9em;
+  }
+}

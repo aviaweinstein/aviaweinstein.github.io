@@ -120,27 +120,23 @@
 }
 
 .csstransforms .cn-wrapper li:nth-child(odd) a {
-  background-color: #87CEFA;
-  background-color: hsla(203, 92%, 75.5%, 1);
+  background-color: #88c8e4;
 }
 
 .csstransforms .cn-wrapper li:nth-child(even) a {
-  background-color: #9fd8fb;
-  background-color: hsla(203, 92%, 80.4%, 1);
+  background-color: #acd9ec;
 }
 
 /* active style */
 .csstransforms .cn-wrapper li.active a {
-  background-color: #3eb0f7;
-  background-color: hsla(203, 92%, 60.6%, 1);
+  background-color: #00bbe6;
 }
 
 /* hover style */
 .csstransforms .cn-wrapper li:not(.active) a:hover,
 .csstransforms .cn-wrapper li:not(.active) a:active,
 .csstransforms .cn-wrapper li:not(.active) a:focus {
-  background-color: #3eb0f7;
-  background-color: hsla(203, 92%, 60.6%, 1);
+  background-color: #00bbe6;
 }
 /*.csstransforms .cn-wrapper li:not(.active) a:focus {*/
   /*position: fixed; [> fix the "displacement" bug in webkit browsers when using tab key <]*/
