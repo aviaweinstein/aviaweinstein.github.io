@@ -39,7 +39,7 @@ $(document).ready(function(){
       });
     }
 
-    $('.move').on('mouseend touchend', function(e) {
+    $('.move').on('mouseup touchend', function(e) {
       if (e.touches) {
         if (e.touches.length > 1) {
           e.preventDefault();
@@ -52,23 +52,6 @@ $(document).ready(function(){
       }
       $('.move').unbind('mousemove touchmove');
     });
-    //if (e.touches) {
-    //  if (e.touches.length > 1) {
-    //    $('.move').on('touchend', function(e) {
-    //      e.preventDefault();
-    //      $('.move').unbind('touchmove');
-    //    });
-    //  } else {
-    //    $('.move').on('touchend', function(e) {
-    //      $('.move').css('opacity', 1);
-    //    });
-    //  }
-    //} else {
-    //  $('.move').on('mouseend', function(e) {
-    //      e.preventDefault();
-    //      $('.move').unbind('mousemove');
-    //    });
-    //}
   });
   
 });
