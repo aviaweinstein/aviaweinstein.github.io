@@ -48,6 +48,10 @@ h2 {
   margin-top: 20px;
 }
 
+.padding-south {
+  padding-bottom: 10px;
+}
+
 .button_container {
   width: 252px;
   margin: 0 auto;
