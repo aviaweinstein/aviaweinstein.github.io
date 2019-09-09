@@ -29,8 +29,12 @@ ul {
     1px 1px 0 #5f5f61;
 }
 
-.banner h1::first-letter {
+.blue {
+  color: #00AFD8;
+}
 
+.clear-floats {
+  clear: both;
 }
 
 h2 {
@@ -49,12 +53,7 @@ h2 {
 }
 
 .padding-south {
-  padding-bottom: 10px;
-}
-
-.button_container {
-  width: 252px;
-  margin: 0 auto;
+  padding-bottom: 16px;
 }
 
 .ghost_button {
@@ -76,6 +75,10 @@ h2 {
 
 .caption {
   text-align: center;
+}
+
+.font-emphasized {
+  font-weight: 400;
 }
 
 #about_me, #projects, #resume {
@@ -174,7 +177,7 @@ h2 {
 }
 
 .tile-container.is_open.bagpipe-container .front {
-  height: 437px;
+  height: 535px;
 }
 
 .tile-container.is_open.travel-container .front {
@@ -194,7 +197,7 @@ h2 {
 }
 
 .tile-container.is_open.bagpipe-container .back {
-  height: 437px;
+  height: 480px;
 }
 
 .tile-container.is_open.travel-container .back {
@@ -289,7 +292,7 @@ h2 {
   }
 
   .tile-container.is_open.bagpipe-container .front, .tile-container.is_open.bagpipe-container .back {
-    height: 489px;
+    height: 535px;
   }
 
   .tile-container.is_open.travel-container .front, .tile-container.is_open.travel-container .back {
