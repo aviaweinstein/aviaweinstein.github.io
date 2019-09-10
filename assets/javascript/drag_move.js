@@ -1,8 +1,7 @@
-$(document).ready(function(){
-
+function interactiveImage(pathToImage = 'assets/images/', fileName = 'image.jpg', totalFrames = 12, targetedImage = '#move') {
   var frame = 0;
 
-  $('.move').on('mousedown touchstart', function(e) {
+  $(targetedImage).on('mousedown touchstart', function(e) {
     e.preventDefault();
     var newY = null;
     var oldY = null;
@@ -10,28 +9,27 @@ $(document).ready(function(){
     function changeFrame(event, frameSpeed) {
       oldY = newY;
       newY = event.pageY || event.originalEvent.touches[0].pageY;
-      if ((frame < 12) & (oldY < newY) & (Math.ceil(newY)%frameSpeed == 0)) {
+      if ((frame < totalFrames) & (oldY < newY) & (Math.ceil(newY)%frameSpeed == 0)) {
         frame += 1;
       } else if ((frame > 0) & (oldY > newY) & (Math.ceil(newY)%frameSpeed == 0)) {
         frame -= 1;
       }
-      $('.move').first().attr("src", "assets/images/tmp-"+frame+".gif");
+      $(targetedImage).first().attr('src', pathToImage + frame + '-' + fileName);
     }
 
-    $('.move').on('mousemove', function(e) {
+    $(targetedImage).on('mousemove', function(e) {
       e.preventDefault();
       changeFrame(e, 2);
     });
 
-    $('.move').on('touchmove',function(e) {
+    $(targetedImage).on('touchmove',function(e) {
       e.preventDefault();
       changeFrame(e, 5);
     });
 
-    $('.move').on('mouseup touchend', function(e) {
+    $(targetedImage).on('mouseup touchend', function(e) {
       e.preventDefault();
-      $('.move').unbind('mousemove touchmove');
+      $(targetedImage).unbind('mousemove touchmove');
     });
   });
-  
-});
+}
