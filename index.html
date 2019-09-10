@@ -11,9 +11,9 @@
     <script src="assets/javascript/jquery-3.0.0.min.js"></script>
     <script src="assets/javascript/modernizr-2.6.2.min.js"></script>
     <script src="assets/javascript/polyfills.js"></script>
+    <script src="assets/javascript/drag_move.js"></script>
     <script src="assets/javascript/nav.js"></script>
     <script src="assets/javascript/main.js"></script>
-    <script src="assets/javascript/drag_move.js"></script>
     <script src="assets/javascript/google_analytics.js"></script>
   </head>
 
@@ -22,9 +22,9 @@
       <button class="cn-button" id="cn-button">+</button>
       <div class="cn-wrapper" id="cn-wrapper">
         <ul>
-          <li><a href="#resume" data-link="resume"><span class="">Resume</span></a></li>
           <li><a href="#projects" data-link="projects"><span class="">Projects</span></a></li>
           <li><a href="#about_me" data-link="about_me"><span class="">About Me</span></a></li>
+          <li><a href="#resume" data-link="resume"><span class="">Resume</span></a></li>
         </ul>
       </div>
       <div id="cn-overlay" class="cn-overlay"></div>
@@ -33,6 +33,23 @@
       <h1>Avia Weinstein</h1>
       <img src="assets/images/profile_no_background.png" alt="Avia's profile image" />
     </div>
+    <div id="resume">
+      <h2>
+        RESUME
+      </h2>
+      <p>
+        I am seeking a full-time job as a Software Engineer. Primarily, I am looking for either a position in Front End or Full Stack Web Development. If you think I might be a good fit for your team, please feel free to reach out and download my resume below.
+      </p>
+      <div id="resume_button_container">
+        <div class="resume_buttons">
+          <div class="ghost_button"><a target="_blank" href="assets/documents/Avia_Weinstein_Resume_2019.pdf" download>Resume</a></div>
+        </div>
+        <div class="resume_buttons">
+          <div class="ghost_button"><a href="mailto:aviaweinstein@gmail.com?Subject=I%20saw%20your%20website">Email Me</a></div>
+        </div>
+      </div>
+    </div>
+    <hr />
     <div id="about_me">
       <h2>
         ABOUT ME
@@ -41,15 +58,23 @@
         Professionally
       </p>
       <p class="padding-south">
-        I am a Software Engineer with a focus in Front End Web Development. I have been working at startups for the past three years. My first two years were at 4moms, and this past year was at Forever Inc.
+        I am a Software Engineer with a focus in Front End Web Development. Since graduating form Carnegie Mellon University in 2014, I have been working at various startups. I started at 4moms and then spent some time at Forever Inc before heading to my current company, VacayHome Connect.
       </p>
       <p class="padding-south">
-        While at Forever Inc, I served as the sole Software Engineer on the Design team. This means that I acted as a liaison between the Designers and Engineers as well as aided the designers that were writing browser code. When I joined the company, Forever was in the middle of a massive project to merge their marketing website and shopping website. This project was also a responsive redesign. I was able to meaningfully contribute to both frontend and backend code on this project by my third day on the job. 
+        At <span class="font-emphasized">VacayHome Connect</span>, I was the second Software Engineer to join the company and the first Front End Developer. Being one of the first developers came with a lot of opportunities and responsibilities. Soon after starting, the product team began
+        working on a new application aimed to revolutionize the vacation rental distribution industry through automation. I first took on the responsibility of researching and determining the frontend framework for the application. Given the requirements, Angular 6 was chosen (currently
+        we are on Angular 8 and continue to update as new versions come out). I quickly learned Angular and TypeScript and began structuring the application. Given the magnitude of this project, I worked closely with a few offshore developers while leading the efforts to hire an onshore
+        frontend software team. I now manage an in house team of 2 developers and 1 intern. Over the course of this project, I was a primary contributor and leader in developing standards and processes. This application is currently in production with new and updated features being added
+        regularly. I have additionally envisioned and brought to fruition a company operational dashboard app and several cultural initiatives. Some highlighted initiatives include adding a snack shop in the office where money goes to new charities each quarter and unique employee
+        <a class="blue" target="_blank" href="assets/images/avia-faceplate.jpg">faceplates</a> identifying individuals' workspaces.
+      </p>
+      <p class="padding-south">
+        While at <span class="font-emphasized">Forever Inc</span>, I served as the sole Software Engineer on the Design team. This means that I acted as a liaison between the Designers and Engineers as well as aided the designers that were writing browser code. When I joined the company, Forever was in the middle of a massive project to merge their marketing website and shopping website. This project was also a responsive redesign. I was able to meaningfully contribute to both frontend and backend code on this project by my third day on the job.
 The next large project was a complete remake of Forever's primary product application. Being on the project from the very start allowed me to make vital frontend architectural decisions. I also quickly learned Vue.js, the newly-chosen frontend framework.
 As company culture was very important to me, I planned and organized a company-wide egg scavenger hunt and ugly sweater competition. I also led a project to create a company yearbook. All of which was worked on outside of regular working hours. Lastly, I added fun twists to otherwise mundane team rituals such as a team unity clap after standups.
       </p>
       <p>
-        During my time at 4moms, I primarily worked on the consumer websites 4moms.com and global.4moms.com, as well as the eCommerce website shop.4moms.com, totalling 19 websites.
+        During my time at <span class="font-emphasized">4moms</span>, I primarily worked on the consumer websites 4moms.com and global.4moms.com, as well as the eCommerce website shop.4moms.com, totalling 19 websites.
         I played a significant role rebuilding all 19 sites to be responsive. This increased mobile traffic by 45% and mobile conversion rate by 25% within 6 weeks of completion of implementation.
         I also created a web application that automated documentation of product information coming off of the assembly line. This site functioned offline using application cache and local storage. 4moms went from capturing 0 to 15,000 product assemblies per month without a cost increase. 
       </p>
@@ -60,7 +85,7 @@ As company culture was very important to me, I planned and organized a company-w
         I am a detail oriented, truth telling, left-brain math enthusiast with just enough of right-brain creativity to balance out my technical skills for the perfect balance.
       </p>
       <p>
-        I am passionate about putting in a good days work so that I can come home to my 5 year old puppy and play a fun game of tug a war or take a quick weekend trip to anywhere in the world. I enjoy volunteering and helping others as well as love learning about other cultures. Learn more about me:
+        I am passionate about putting in a good days work so that I can come home to my 6 year old puppy and play a fun game of tug a war or take a quick weekend trip to anywhere in the world. I enjoy volunteering and helping others as well as love learning about other cultures. Learn more about me:
       </p>
       <div class="tiles">
         <div class="dog-container tile-container">
@@ -86,7 +111,7 @@ As company culture was very important to me, I planned and organized a company-w
           <div class="bagpipe-front front">
             <img src="assets/images/bagpipe_1_1_BLUR.jpg" alt="My bagpipe band" />
             <div class="tile-overlay">
-              <p class="bolder">See my bagpipe band...</p>
+              <p class="bolder">See my unusual hobbies...</p>
               <img src="assets/images/icon-bagpipe.png" alt="bagpipe icon" />
               <!-- icon curtousy of Dosse Dossena -->
             </div>
@@ -95,9 +120,9 @@ As company culture was very important to me, I planned and organized a company-w
             <div class="close">
               <img src="assets/images/icon-X.png" alt="X" />
             </div>
-            <p>I have been playing tenor drums in the Carnegie Mellon Bagpipe band for 5 years now! We have both a grade 3 and 5 band.</p>
+            <p>In my free time you'll find me doing a number of different activities! Among my favorites are learning Chinese (你好), attempting new rollerblading tricks, and twirling my tenor drum mallets.</p>
+            <p>I played tenor drums in the Carnegie Mellon Bagpipe band for 6 years while I lived in Pittsburgh!</p>
             <img src="assets/images/bagpipe_1_1_crop.jpg" alt="My bagpipe band" />
-            <p>Between Monday night practice and weekend competitions, I get my fair share of celtic music!</p>
           </div>
         </div>
       
@@ -114,7 +139,7 @@ As company culture was very important to me, I planned and organized a company-w
             <div class="close">
               <img src="assets/images/icon-X.png" alt="X" />
             </div>
-            <p>I absolutely love to travel: seeing new cultures and eating new foods. My favorite trips to date were my internship in India and vacation in Costa Rica.</p>
+            <p>I absolutely love to travel: seeing new cultures and eating new foods. My favorite trips were my internship in India, vacation in Costa Rica, and backpacking trip through Spain.</p>
             <img src="assets/images/india_1_1_crop.jpg" alt="India" />
             <img src="assets/images/costa_rica_1_1_crop.jpg" alt="Costa Rica" />
           </div>
@@ -130,10 +155,27 @@ As company culture was very important to me, I planned and organized a company-w
         The following work includes both personal projects and a couple highlighted pieces from previous jobs.
       </p>
       <p class="large sub-title bold">
+        Wow Board
+      </p>
+      <p>
+        For this side project, I created an app inspired by an internal tool used at 4moms allowing employees to send compliments to each other. Using Pug, Node.js, Express.js, and MongoDB, I enjoyed expanding my skillset and utilizing full stack development to implement this app. Work is in progress and can be viewed from my <a class="blue" target="_blank" href="https://github.com/aviaweinstein/complimentsBoard">GitHub repository</a>. Be on the lookout for a live website soon.
+      </p>
+      <p class="large sub-title bold">
+        User Interactive GIF
+      </p>
+      <p>
+        This was a fun side project I did after being inspired by another website. Using JavaScript, I allowed potential users to interact with images by dragging either mouse on computer or finger on touch screen. Check out the <a class="blue" target="_blank" href="https://github.com/aviaweinstein/InteractiveImage">GitHub repository</a> and try it yourself below!
+      </p>
+      <div class="examples">
+        <h3>drag to manipulate the 4moms breeze®</h3>
+        <img src="assets/images/interactive_image/0-breeze.gif" id="move"/>
+      </div>
+      <p class="small caption">Images property of 4moms®</p>
+      <p class="large sub-title bold">
         4moms Website
       </p>
       <p>
-        While working at 4moms, I spent an extensive amount of time working on the company website where I touched almost every page. Once the design files are recieved, I work with the relevent designers to execute page updates with great attention to detail. A noteworthy project was a website wide responsive redesign. Some of the most interesting pages I updated (links verified through November 2017) are:
+        While working at 4moms, I spent an extensive amount of time working on the company website where I touched almost every page. Once the design files are recieved, I work with the relevent designers to execute page updates with great attention to detail. A noteworthy project was a website wide responsive redesign. Some of the most interesting pages I updated (links verified through September 2019) are:
       </p>
       <div class="web_4moms_buttons">
         <div class="ghost_button"><a target="_blank" href="https://www.4moms.com/cares">4moms Cares Page</a></div>
@@ -142,17 +184,12 @@ As company culture was very important to me, I planned and organized a company-w
         <div class="ghost_button"><a target="_blank" href="https://www.4moms.com/infant_seats_comparison">Infant Seat Comparison Page</a></div>
       </div>
       <div class="web_4moms_buttons">
-        <div class="button_container">
-          <div class="ghost_button"><a target="_blank" href="https://www.4moms.com/">Email Signup Toaster *</a></div>
-          <p class="small caption">* viewable to new visitors within 10 seconds on website</p>
-        </div>
+        <div class="ghost_button"><a target="_blank" href="https://www.4moms.com/">Site Menu</a></div>
       </div>
-      <p class="large sub-title bold">
-        iSTEP Website
-      </p>
-      <p>
-        As an iSTEP intern during the summer of 2013, I implemented a website in about 12 hours to show case the internship program for the nonprofit TechBridgeWorld. This work was accomplished by collaborating with the design intern.
-        <div class="ghost_button"><a target="_blank" href="https://web.archive.org/web/20150320165458/http://istep2013.techbridgeworld.org/">iSTEP Website</a></div>
+      <p class="small caption clear-floats">
+        * videos showing unique behaviors available as well: <a class="blue" target="_blank" href="assets/images/old_websites/4moms_cares.mp4">cares page</a>,
+        <br />
+        <a class="blue" target="_blank" href="assets/images/old_websites/4moms_responsive_table.mp4">seat comparison page</a>, <a class="blue" target="_blank" href="assets/images/old_websites/4moms_menu_coloring.mp4">menu button coloring</a>, <a class="blue" target="_blank" href="assets/images/old_websites/4moms_menu.mp4">menu product section</a>, and <a class="blue" target="_blank" href="assets/images/old_websites/4moms_toaster.mp4">email sign up toaster</a>.
       </p>
       <p class="large sub-title bold">
         This Website
@@ -161,33 +198,12 @@ As company culture was very important to me, I planned and organized a company-w
         In case you weren't sure, I created this website from scratch. This work highlights some of my CSS3 skills including transitions and transformations. I even created the basic design!
       </p>
       <p class="large sub-title bold">
-        User Interactive GIF
+        iSTEP Website
       </p>
       <p>
-        This was a fun side project I did after being inspired by another website. Using JavaScript, I allowed potential users to interact with images by dragging either mouse on computer or finger on touch screen. Try it yourself below!
+        As an iSTEP intern during the summer of 2013, I implemented a website in about 12 hours to show case the internship program for the nonprofit TechBridgeWorld. This work was accomplished by collaborating with the design intern.
+        <div class="ghost_button"><a target="_blank" href="https://web.archive.org/web/20150320165458/http://istep2013.techbridgeworld.org/">iSTEP Website</a></div>
       </p>
-      <div class="examples">
-        <h3>drag to manipulate the 4moms breeze®</h3>
-        <img src="assets/images/tmp-0.gif" class="move"/>
-      </div>
-      <p class="small caption">Images property of 4moms®</p>
-    </div>
-    <hr />
-    <div id="resume">
-      <h2>
-        RESUME
-      </h2>
-      <p>
-        I am seeking a full-time job as a Software Engineer. Primarily, I am looking for a position in Front End Web Development. If you think I might be a good fit for your team, please feel free to reach out and download my resume below.
-      </p>
-      <div id="resume_button_container">
-        <div class="resume_buttons">
-          <div class="ghost_button"><a href="assets/documents/Avia_Weinstein_Resume.pdf" download>Resume</a></div>
-        </div>
-        <div class="resume_buttons">
-          <div class="ghost_button"><a href="mailto:aviaweinstein@gmail.com?Subject=I%20saw%20your%20website">Email Me</a></div>
-        </div>
-      </div>
     </div>
   </body>
 
