@@ -7,4 +7,6 @@ $(function() {
   	e.stopPropagation();
   	$(this).parent().parent().removeClass('is_open')
   })
+
+  interactiveImage('assets/images/interactive_image/', 'breeze.gif', 12);
 });
